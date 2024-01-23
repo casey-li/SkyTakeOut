@@ -11,3 +11,8 @@ sky:
     access-key-id: LTAI5t5iqYZjZzT3iSPznSyt
     access-key-secret: 4bul2QgNlmGHZb3BAkGaGVlTY06Z4F
     bucket-name: tlias-lxq
+  redis:
+    host: localhost
+    port: 6379
+    password: 123456
+    database: 10
