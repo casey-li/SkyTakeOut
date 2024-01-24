@@ -4,4 +4,5 @@
 *.class
 *Test.java
 **/test/
-/frontend/
+/frontend/nginx-1.20.2/logs
+sky-server/src/main/resources/application-dev.yml
