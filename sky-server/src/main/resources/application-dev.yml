@@ -7,15 +7,15 @@ sky:
     username: root
     password: root123
   alioss:
-    endpoint: oss-cn-beijing.aliyuncs.com
-    access-key-id: LTAI5t5iqYZjZzT3iSPznSyt
-    access-key-secret: 4bul2QgNlmGHZb3BAkGaGVlTY06Z4F
-    bucket-name: tlias-lxq
+    endpoint: XXX
+    access-key-id: XXX
+    access-key-secret: XXX
+    bucket-name: XXX
   redis:
     host: localhost
     port: 6379
     password: 123456
     database: 10
   wechat:
-    appid: wx8b94773483484bce
-    secret: 5765920ef5531174e3addce10d0a08ef
+    appid: XXX
+    secret: XXX

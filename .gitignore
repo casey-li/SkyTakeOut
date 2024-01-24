@@ -1,7 +1,7 @@
 **/target/
 .idea
-frontend
 *.iml
 *.class
 *Test.java
 **/test/
+/frontend/
