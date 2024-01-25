@@ -20,7 +20,6 @@ public class AddressBookController {
 
     /**
      * 查询当前登录用户的所有地址信息
-     *
      * @return
      */
     @GetMapping("/list")
@@ -34,7 +33,6 @@ public class AddressBookController {
 
     /**
      * 新增地址
-     *
      * @param addressBook
      * @return
      */
@@ -45,6 +43,11 @@ public class AddressBookController {
         return Result.success();
     }
 
+    /**
+     * 根据id查询地址
+     * @param id
+     * @return
+     */
     @GetMapping("/{id}")
     @ApiOperation("根据id查询地址")
     public Result<AddressBook> getById(@PathVariable Long id) {
@@ -54,7 +57,6 @@ public class AddressBookController {
 
     /**
      * 根据id修改地址
-     *
      * @param addressBook
      * @return
      */
@@ -67,7 +69,6 @@ public class AddressBookController {
 
     /**
      * 设置默认地址
-     *
      * @param addressBook
      * @return
      */
@@ -80,7 +81,6 @@ public class AddressBookController {
 
     /**
      * 根据id删除地址
-     *
      * @param id
      * @return
      */
@@ -91,8 +91,10 @@ public class AddressBookController {
         return Result.success();
     }
 
+
     /**
      * 查询默认地址
+     * @return
      */
     @GetMapping("default")
     @ApiOperation("查询默认地址")
@@ -106,7 +108,6 @@ public class AddressBookController {
         if (list != null && list.size() == 1) {
             return Result.success(list.get(0));
         }
-
         return Result.error("没有查询到默认地址");
     }
 

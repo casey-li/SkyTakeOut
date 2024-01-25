@@ -18,7 +18,6 @@ public class AddressBookServiceImpl implements AddressBookService {
 
     /**
      * 条件查询
-     *
      * @param addressBook
      * @return
      */
@@ -28,7 +27,6 @@ public class AddressBookServiceImpl implements AddressBookService {
 
     /**
      * 新增地址
-     *
      * @param addressBook
      */
     public void save(AddressBook addressBook) {
@@ -39,7 +37,6 @@ public class AddressBookServiceImpl implements AddressBookService {
 
     /**
      * 根据id查询
-     *
      * @param id
      * @return
      */
@@ -50,7 +47,6 @@ public class AddressBookServiceImpl implements AddressBookService {
 
     /**
      * 根据id修改地址
-     *
      * @param addressBook
      */
     public void update(AddressBook addressBook) {
@@ -59,7 +55,6 @@ public class AddressBookServiceImpl implements AddressBookService {
 
     /**
      * 设置默认地址
-     *
      * @param addressBook
      */
     @Transactional
@@ -76,7 +71,6 @@ public class AddressBookServiceImpl implements AddressBookService {
 
     /**
      * 根据id删除地址
-     *
      * @param id
      */
     public void deleteById(Long id) {
