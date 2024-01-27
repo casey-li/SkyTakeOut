@@ -71,4 +71,37 @@
         </where>
         order by order_time desc
     </select>
+
+    <!--根据动态条件统计营业额-->
+    <!--大于小于用转移，不然容易和各种条件弄混。&gt表示大于，&lt表示小于-->
+    <select id="sumByMap" resultType="java.lang.Double">
+        select sum(amount) from orders
+        <where>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="begin != null">
+                and order_time &gt;= #{begin}
+            </if>
+            <if test="end != null">
+                and order_time &lt;= #{end}
+            </if>
+        </where>
+    </select>
+
+    <!--根据动态条件统计订单数量-->
+    <select id="countByMap" resultType="java.lang.Integer">
+        select count(id) from orders
+        <where>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="begin != null">
+                and order_time &gt;= #{begin}
+            </if>
+            <if test="end != null">
+                and order_time &lt;= #{end}
+            </if>
+        </where>
+    </select>
 </mapper>
