@@ -48,12 +48,26 @@
         where id = #{id}
     </update>
 
+    <!--动态条件查询套餐-->
     <select id="list" parameterType="Setmeal" resultType="Setmeal">
         select * from setmeal
         <where>
             <if test="name != null"> and name like concat('%',#{name},'%') </if>
             <if test="categoryId != null"> and category_id = #{categoryId} </if>
             <if test="status != null"> and status = #{status} </if>
+        </where>
+    </select>
+
+    <!--根据条件统计套餐数量-->
+    <select id="countByMap" resultType="java.lang.Integer">
+        select count(id) from setmeal
+        <where>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="categoryId != null">
+                and category_id = #{categoryId}
+            </if>
         </where>
     </select>
 </mapper>
